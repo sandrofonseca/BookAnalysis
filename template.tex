@@ -1,0 +1,197 @@
+\documentclass[10pt, a4paper, twoside, openright]{report}
+
+\usepackage[brazil]{babel}
+\usepackage{url}
+\usepackage{amssymb,amsxtra} %amsthm, amsxtra,dsfont}%}%
+\usepackage[dvips=false, pdftex=false, vtex=false]{geometry}
+
+\geometry{
+ dvips=true, dvipdfm=true, pdftex=true, verbose, twoside, a4paper,
+ headsep=1.00cm, footskip=1.00cm,
+ %headheight=1.25em,
+ paperwidth = 16.00truecm, paperheight = 23.00truecm,
+ footnotesep=0.5cm,
+ includehead, includefoot, ignoremp,
+ hdivide = {2.00truecm,12.7truecm ,1.30truecm},  vdivide = {1.3truecm, ,1.30truecm}
+}
+
+%\usepackage[a4,center,font=textsf,frame]{crop}  %frame ou cam
+\usepackage[a4,center,font=textsf,cam]{crop}
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{3}
+
+\usepackage{makeidx}%showidx
+\usepackage{graphicx,color}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{Cap.$\, $\thechapter \hspace{1em} #1}{}}
+%% ==============================
+\fancyhead{}% clear all fields\rhead{\nouppercase{\leftmark}}
+%\fancyhead[LO]{\scriptsize\nouppercase{\sc\rightmark}}%
+\fancyhead[LO]{}
+\fancyhead[CO]{\scriptsize\nouppercase{\sc\rightmark}}%
+%\fancyhead[RO]{~\mbox{\thepage}\hspace{-1.5em}}%
+\fancyhead[RO]{~\mbox{\thepage}\hspace{0.0em}}%
+%\fancyhead[RE]{\scriptsize\rm\nouppercase{\sc\leftmark}}%
+%\fancyhead[LE]{\hspace{-1.5em}\mbox{\bf\textcolor[gray]{.60}\thepage}~}%
+\fancyhead[LE]{\thepage}
+\fancyhead[RE]{\footnotesize\rm\nouppercase{\sc  Cap\'{\i}tulo~\thechapter}}
+\fancyfoot{}
+%\fancyfoot[LO]{}%{2004}
+%\fancyfoot[RE]{{\scriptsize 2009}}
+%\fancyfoot[LE]{{\scriptsize\sc ed. ACMO}}
+%\fancyfoot[RO]{}
+%\fancyfoot[CE]{}%\textsc{\scriptsize\textmd{T\'{o}picos Breves de Matem\'{a}tica}}}
+%\fancyfoot[CO]{\textsc{\scriptsize\textmd{QCD Perturbativa}}}
+%
+\renewcommand{\headrulewidth}{0.025pt}%{0.1pt}
+\renewcommand{\footrulewidth}{0.0pt}%{0.1pt}
+
+\usepackage[nottoc]{tocbibind}% coloca refer\^{e}ncia e \'{\i}ndice no sum\'{a}rio.
+\usepackage[font=small,labelfont=bf,indention=1.5em]{caption}% <<===== CAPTION
+\captionsetup[table]{position=top}%{position=top}
+\captionsetup[figure]{position=bottom}
+
+\usepackage{rotating}
+
+%\makeindex
+
+\newcommand{\textind}[1]{\emph{#1}}
+\newcommand{\imag}{\rm{i}}
+\newcommand{\ie}{\emph{i.e.}}
+\newcommand{\figN}[1]{Fig.$ \, $\ref{#1}}
+\newcommand{\pouco}{\nolinebreak[4]\hspace{.1ex}}
+\newcommand{\campo}[1]{\Vec{\boldsymbol{\mathrm{#1}}\!}\,}
+\newcommand{\dif}{\mathrm{d}}
+\newcommand{\slaf}[1]{{\not}{#1{}_{}}\,}
+\DeclareMathOperator{\sen}{sen}%
+\DeclareMathOperator{\tg}{tg}%
+%\def\na{-\kern-.4em\raise.8ex\hbox{{\tt \scriptsize a}}\ }
+
+\def\cao{\c c\~ao}
+\def\coes{\c c\~oes}
+\def\ao{\~ao}
+\def\oes{\~oes}
+\def\ii{\' \i }
+\def\etal{{\it et al.}}
+\def\apriori{{\it a priori}}
+\def\aposteriori{{\it a posteriori}}
+%\def\na{-\kern-.4em\raise.8ex\hbox{{\tt \scriptsize a}}\ }
+%\def\no{-\kern-.4em\raise.8ex\hbox{{\tt \scriptsize o}}\ }
+\def\no{n$^{\underline{\rm o}}$}
+\def\na{$^{\underline{\rm a}}$}
+\def\cte{constante}
+\def\opi{\kern-.1em\raise1.0ex\hbox{\underline{\hspace{6.2cm}} } }
+\def\opf{\kern-.1em\raise1.0ex\hbox{\underline{\hspace{6.0cm}} } }
+\def\op{\kern-.1em\raise1.0ex\hbox{\underline{\hspace{12.8cm}} } }
+
+
+\def\daClas{\mbox{$\:$\setlength{\unitlength}{1.2ex}%
+\begin{picture}(1.35,1.0)%
+\put(0.0,0.50){\line(1,0){1.35}}%
+\put(0.0,0.05){\line(0,1){0.90}}%
+\end{picture}$\:$%
+}}%
+
+\font\itb=cmbxti10 at 14pt
+
+\font\tb=cmr9 at 10pt
+
+
+%\input{def-mahon}
+
+\usepackage[T1]{fontenc}
+\usepackage[bitstream-charter]{mathdesign}
+%\usepackage[utopia]{mathdesign}
+
+%\usepackage{natbib}
+%\usepackage{chapterbib}
+%\usepackage{cbfonts-fd}
+
+\usepackage{lineno}
+\linenumbers
+
+%\makeindex
+
+\begin{document}
+
+\selectlanguage{brazil}
+\baselineskip=15pt
+\pagenumbering{roman}
+%
+\include{capa}%\markboth{ }{ }\thispagestyle{myheadings}
+\clearpage
+
+\newpage \ \\
+\thispagestyle{empty}
+
+\newpage
+
+\pagenumbering{arabic}
+\markboth{ }{ }
+\pagestyle{fancy}
+%\pagestyle{myheadings}
+\parskip 2mm
+%
+\baselineskip=15pt
+
+
+%\setcounter{chapter}{1}
+%\setcounter{page}{10}
+%\fancyhead[LE]{\thepage \quad  \footnotesize\rm\nouppercase{\sc Acaso e necessidade} }
+%\fancyhead[LE]{\scriptsize\nouppercase{\sc\rightmark} \quad \footnotesize \rm\nouppercase{\sc  Cap\'{\i}tulo~\thechapter}}
+\fancyhead[CE]{\scriptsize\nouppercase{\sc\rightmark}}
+%\include{intro}\markboth{ }{ }\thispagestyle{myheadings}
+
+%\fancyhead[LE]{\thepage \quad  \footnotesize\rm\nouppercase{\sc M\'{e}todo da m\'{a}xima verossimilhan\c{c}a} }
+\include{likelihood}\markboth{ }{ }\thispagestyle{myheadings}
+
+\fancyhead[LO]{\scriptsize\nouppercase{}}%
+\fancyhead[RE]{\footnotesize\rm\nouppercase{\sc  Ap\^{e}ndice~\thechapter}}
+%\fancyhead[RE]{\scriptsize\nouppercase{\sc\rightmark}}
+%\include{apend}\markboth{ }{ }\thispagestyle{myheadings}
+
+%\pagestyle{fancy}
+\fancyhead[CO]{}
+\fancyhead[LO]{\scriptsize\nouppercase{\sc\rightmark}}%
+\fancyhead[RO]{~\mbox{\thepage}\hspace{0.0em}}%
+\fancyhead[CE]{}
+\fancyhead[LE]{\thepage}
+\fancyhead[RE]{\footnotesize\rm\nouppercase{\sc \rightmark}}
+\include{bibliography}
+%\nocite{*}
+
+
+{\small
+%\input{fisgeral-F1-ind}
+\clearpage\markboth{ \mbox{} }{ \mbox{} }
+
+%\newpage
+%\def\listfigurename{Figuras}
+%\listoffigures
+
+%\newpage
+%\def\listtablename{Tabelas}
+%\listoftables
+
+
+\newpage
+\markboth{\'{I}ndice remissivo}{\'{I}ndice remissivo}
+\pagestyle{fancy}
+\fancyhead[LO]{\scriptsize\nouppercase{\sc \'{I}ndice remissivo}}%
+%\fancyhead[RO]{~\mbox{\thepage}\hspace{-1.5em}}%
+\fancyhead[RO]{~\mbox{\thepage}\hspace{0.0em}}%
+\fancyhead[LE]{\thepage}
+\fancyhead[RE]{\footnotesize\rm\nouppercase{\sc \'{I}ndice remissivo}}
+
+\def\indexname{\'{I}ndice remissivo}
+\printindex %\thispagestyle{empty}
+}
+
+
+
+\end{document}
+
+
+

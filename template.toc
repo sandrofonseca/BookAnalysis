@@ -1,0 +1,8 @@
+\contentsline {chapter}{Pref\'{a}cio}{vii}%
+\babel@toc {brazil}{}
+\babel@toc {brazil}{}
+\contentsline {chapter}{5 \hskip 1em\relax Determina\c {c}\~{a}o de par\^{a}metros}{1}%
+\contentsline {section}{\numberline {5.1}Origens dos m\'{e}todos estat\'{\i }sticos}{1}%
+\contentsline {section}{\numberline {5.2}O m\'{e}todo da m\'{a}xima verossimilhan\c {c}a de Fisher}{2}%
+\contentsline {section}{\numberline {5.3}Exerc\'{\i }cios}{7}%
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{9}%

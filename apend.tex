@@ -1,0 +1,176 @@
+\newpage
+\
+\thispagestyle{empty}
+
+\newpage
+\
+\thispagestyle{empty}
+
+ \appendix
+
+\markboth{ \mbox{AP\^{E}NDICE A} }{ \mbox{AP\^{E}NDICE A} }
+
+%\noindent {\huge \bf Ap\^{e}ndices}
+\
+
+\vspace*{1.0cm}
+
+\noindent {\huge \bf Ap\^{e}ndice A}
+
+\label{topico}
+\addcontentsline{toc}{chapter}{A \quad T\'{o}picos sobre probabilidades}
+
+
+\setcounter{chapter}{1}
+
+\setcounter{equation}{0}
+
+
+\begin{flushright}
+\begin{minipage}{6.5cm}
+{\small
+\baselineskip=8pt
+{\it As loterias s\~{a}o formas de taxa\c{c}\~{a}o (aceitas livremente) das camadas menos privilegiadas da sociedade.}
+
+\smallskip
+\hfill D. Ruelle
+}
+\end{minipage}
+\end{flushright}
+
+
+
+%\newpage
+%\thispagestyle{empty}
+
+%\newpage
+%\noindent
+%{\bf Ap\^endices}
+%\addcontentsline{toc}{section}{Ap\^endices}
+
+% \appendix
+% \chapter{T\'opicos sobre probabilidades}
+
+%{\bf A \ \  T\'opicos sobre probabilidades}
+
+%\addcontentsline{toc}{subsection}{I \ \  T\'opicos sobre probabilidades}
+
+
+%\section{T\'opicos sobre probabilidades}
+\label{topicos}
+
+%\def\figurename{\small Fig.~\ref{topicos}.}
+%\def\tablename{\small Tab.~\ref{topicos}.}
+
+\section{Eventos equivalentes} \index{eventos! equivalentes}
+%$\bullet$ {\bf Eventos equivalentes} :
+
+\paragraph*{}
+Se duas vari\'aveis aleat\'orias
+$x$ e $y$ est\~ao relacionadas por $y=f(x)$  e $Y$ \'e um conjunto de
+condi\coes\ (eventos) sobre a vari\'avel $y$~\footnote{Por exemplo,
+uma rela\cao\ do tipo $y < a$, onde $a$ \'e uma constante.}
+e $X = \{ x \ | \ f(x) \in Y \}$, diz-se que os conjuntos $X$ e $Y$ s\~ao
+pro\-ba\-bi\-lis\-ti\-ca\-men\-te e\-qui\-va\-len\-tes, ou que
+s\~ao eventos e\-qui\-va\-len\-tes, no sentido de que
+suas probabilidades de ocorr\^encia s\~ao id\^enticas,
+
+\vspace{.5cm}
+\centerline{\fbox{\
+$P(Y) = P(X)$ \ }}
+
+\subsection*{$\bullet$ distribui\c{c}\~{o}es de probabilidades de eventos equivalentes}
+
+\paragraph*{}
+Sendo $f(x)$  a distribui\c{c}\~{a}o de probabilidades ({\bf pdf}) associada \`a vari\'avel $x$  e $y=h(x)$  uma outra vari\'avel aleat\'oria, por exemplo, $y=1+x=h(x)$ e $f(x) =x/2$ para $0 < x < 2$, a fun\cao\ de distribui\cao\  acumulada ({\bf fd})  \ $G(t)$ associada \`a $y$  ser\'a dada por
+$$
+\begin{array}{ll}
+G(t) \! \! \! \! & =P(y\leq  t)  = P(1+x \leq t )  = P(x\leq t-1) \\
+   \  \\
+     &= \displaystyle \int_0^{t-1} f(x) \ {\rm d}x = \displaystyle \int_0^{t-1} \frac{x}{2} \ {\rm d}x
+       = \frac{(t-1)^2}{4}
+\end{array}
+$$
+\noindent e a pdf de $y$ por
+$$g(y)= \frac{{\rm d}G}{{\rm d}y} = \frac{y-1}{2} $$
+
+Como
+$$ G(t) = P (x \leq \underbrace{t-1}_{h^{-1} (t)} ) =
+F [ \underbrace{h^{-1} (t)}_{x(t)} ]$$
+$$  \Downarrow $$
+$$g(y) = \underbrace{\frac{{\rm d}F}{{\rm d}x}}_{f[x(y)]}
+     \frac{{\rm d}(y)}{{\rm d}x}  = \frac{y-1}{2}$$
+
+Admitindo que  $y=h(x)$ seja  uma fun\cao\ mon\'otona, de acordo com as propriedades,
+
+\begin{itemize}
+    \item[a)] $f$ crescente
+    $$
+\begin{array}{ll}
+G(t)& =P(y\leq  t )  = P[ f(x)  \leq t ] \\
+ & \\
+     & = P [ (x\leq h^{-1} (t) ] = F [ h^{-1} (t) ]
+\end{array}
+$$
+$$\Downarrow$$
+$$\displaystyle  \underbrace{\frac{{\rm d}G}{{\rm d}y}}_{g(y)} =
+  \underbrace{\frac{{\rm d}F}{{\rm d}x}}_{f(x)} \frac{{\rm d}x}{{\rm d}y}
+  \ \ \ \ \left( \frac{{\rm d}x}{{\rm d}y} > 0 \right) $$
+
+    \item[b)] $f$ decrescente
+    $$
+\begin{array}{ll}
+G(t)& =P(y\leq t )  =  P [ (x > h^{-1} (t) ]  \\
+  & \\
+  & = 1 - P [ (x\leq h^{-1} (t) ]
+\end{array}
+$$
+$$\Downarrow$$
+$$ \begin{array}{ll}
+\displaystyle  g(y) & = \displaystyle  - f(x) \ \frac{{\rm d}x}{{\rm d}y}
+ \ \ \ \ \displaystyle  \left( \frac{{\rm d}x}{{\rm d}y} < 0 \right) \\
+ & \\
+   & \displaystyle  = f(x) \ \left| \frac{{\rm d}x}{{\rm d}y} \right|
+   \end{array}
+   $$
+\end{itemize}
+
+\noindent o   resultado  pode ser sistematizado como
+
+\vspace{.5cm}
+\centerline{\fbox{\ $ g(y) =  \displaystyle
+f[x(y)] \ \left| \frac{{\rm d}x(y)}{{\rm d}y} \right| $ \ }}
+
+
+
+
+\subsection*{$\bullet$ valor esperado  de fun\c{c}\~{a}o de uma   vari\'avel aleat\'oria}
+\index{valor! esperado}
+%\addcontentsline{toc}{section}{I Valor m\'edio de fun\cao\ de uma   vari\'avel aleat\'oria}
+
+ \paragraph*{}
+   A  determina\cao\  do valor esperado de uma fun\cao\  $y=h(x)$ de uma vari\'avel aleat\'oria $x$ cuja  pdf \'{e}  $f(x)$ \'{e} dada por $$ \langle y \rangle = \int_{-\infty}^{\infty} y \,  g(y) \ {\rm d}y$$
+sendo $g(y)$ a pdf  de $y$.
+
+No entanto, uma vez que
+    $$
+g(y)  = f[x(y)] \ \displaystyle \frac{{\rm d}x}{{\rm d}y} $$
+$$   \Downarrow $$
+$$
+  \langle y \rangle  = \displaystyle
+  \int_{-\infty}^{\infty} y \  f[x(y)] \
+  \left| \frac{{\rm d}x}{{\rm d}y} \right|  \ {\rm d}y  = \displaystyle
+  \int_{-\infty}^{\infty} y \  f[x(y)] \
+   \frac{{\rm d}x}{{\rm d}y}  \ {\rm d}y
+  $$
+
+\noindent
+\vspace{0.3cm}
+o valor m\'{e}dio pode ser determinado pela {\bf pdf} de $x$,  por
+
+\vspace{.2cm}
+\centerline{\fbox{\ $    \langle h(x) \rangle  =  \displaystyle
+  \int_{-\infty}^{\infty}  \  h(x) \
+   f(x)   \ {\rm d}x  $ \ }}
+
+
